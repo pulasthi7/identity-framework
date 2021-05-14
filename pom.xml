@@ -2048,12 +2048,10 @@
         <maven.checkstyleplugin.version>3.1.0</maven.checkstyleplugin.version>
         <maven.findbugsplugin.version>3.0.5</maven.findbugsplugin.version>
 
-        <properties>
-            <sonar.projectKey>pulasthi7_identity-framework</sonar.projectKey>
-            <sonar.organization>pulasthi7</sonar.organization>
-            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-            <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
-        </properties>
+        <sonar.projectKey>pulasthi7_identity-framework</sonar.projectKey>
+        <sonar.organization>pulasthi7</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
     </properties>
 
     <build>
