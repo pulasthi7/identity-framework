@@ -1650,19 +1650,19 @@
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-testng</artifactId>
-                <version>${org.powermock.version}</version>
+                <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
-                <artifactId>powermock-api-mockito</artifactId>
-                <version>${org.powermock.version}</version>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-testng-common</artifactId>
-                <version>${org.powermock.version}</version>
+                <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
             <!-- Common test utility -->
@@ -2032,7 +2032,7 @@
         <jacoco.version>0.8.2</jacoco.version>
         <jmockit.version>1.44</jmockit.version>
         <maven.surefire.plugin.version>2.22.0</maven.surefire.plugin.version>
-        <org.powermock.version>1.7.4</org.powermock.version>
+        <powermock.version>2.0.9</powermock.version>
 
         <wso2.maven.compiler.source>1.8</wso2.maven.compiler.source>
         <wso2.maven.compiler.target>1.8</wso2.maven.compiler.target>
@@ -2202,6 +2202,13 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>--add-opens java.xml/jdk.xml.internal=ALL-UNNAMED</argLine>
+                </configuration>
             </plugin>
         </plugins>
     </build>

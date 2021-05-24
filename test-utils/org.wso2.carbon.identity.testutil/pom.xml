@@ -56,6 +56,11 @@
             <artifactId>powermock-module-testng-common</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito2</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <!-- MSF4J currently used only on tests as of now -->
         <dependency>
             <groupId>org.wso2.msf4j</groupId>

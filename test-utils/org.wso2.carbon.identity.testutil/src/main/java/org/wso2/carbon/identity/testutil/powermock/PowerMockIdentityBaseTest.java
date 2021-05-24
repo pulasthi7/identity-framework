@@ -46,7 +46,8 @@ import org.wso2.carbon.identity.testutil.log.LogUtil;
  * @see org.wso2.carbon.identity.testutil.IdentityBaseTest
  */
 
-@PowerMockIgnore({"javax.management.*", "javax.script.*"})
+@PowerMockIgnore({"javax.management.*", "javax.script.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*",
+        "org.w3c.*", "com.sun.org.apache.xalan.*", "javax.naming.*","com.sun.org.apache.xml.*"})
 public abstract class PowerMockIdentityBaseTest extends PowerMockTestCase {
 
     public PowerMockIdentityBaseTest() {

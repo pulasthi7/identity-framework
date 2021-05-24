@@ -666,7 +666,7 @@ public class DefaultStepBasedSequenceHandlerTest {
         doAnswer(new Answer<Void>() {
             @Override
             public Void answer(InvocationOnMock invocationOnMock) throws Throwable {
-                AuthenticationContext context = invocationOnMock.getArgumentAt(2, AuthenticationContext.class);
+                AuthenticationContext context = invocationOnMock.getArgument(2, AuthenticationContext.class);
                 StepConfig stepConfig = context.getSequenceConfig().getStepMap().get(context.getCurrentStep());
                 stepConfig.setCompleted(true);
                 context.setRequestAuthenticated(true);
@@ -684,7 +684,7 @@ public class DefaultStepBasedSequenceHandlerTest {
         doAnswer(new Answer<Void>() {
             @Override
             public Void answer(InvocationOnMock invocationOnMock) throws Throwable {
-                AuthenticationContext context = invocationOnMock.getArgumentAt(2, AuthenticationContext.class);
+                AuthenticationContext context = invocationOnMock.getArgument(2, AuthenticationContext.class);
                 StepConfig stepConfig = context.getSequenceConfig().getStepMap().get(context.getCurrentStep());
                 stepConfig.setCompleted(false);
                 context.setRequestAuthenticated(isRequestAuthenticated);
